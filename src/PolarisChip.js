@@ -27,8 +27,8 @@ export class PolarisChip extends LitElement {
         display: inline-block;
         align-items: top;
         background-color: #fff;
-        max-width: 400px;
-        width: 400px;
+        max-width: 300px;
+        width: 200px;
         height: 400px;
         text-align: left;
         padding-left: 8px;
@@ -47,7 +47,7 @@ export class PolarisChip extends LitElement {
 
       .outsidebutton{
         position: absolute;
-        top: 1000px;
+        top: 900px;
         left: 2000px;
         background-color: white;
         outline-color: lightblue;
@@ -164,19 +164,19 @@ export class PolarisChip extends LitElement {
       }
     
       
-      .infotext{
+      .info{
         position: relative;
         font-size: 20px;
         color: black;
-        width: 157px;
+        width: 300px;
         height: 47px;
-        padding-left: 50px;
+        padding-left: 100px;
         font-family: sans-serif;
-        size: 100px;
+        size: 10px;
         width: 250px; 
         height: 114px;
-        left: 300px;
-        top: 225px;   
+        left: 30px;
+        top: 25px;   
         
       }
     `;
@@ -203,15 +203,14 @@ export class PolarisChip extends LitElement {
           <a href=${this.link}>
           <img src=${this.image} ></a> 
         </div>
-          <div class="datebox">
-              <span class="month">${this.month}</span>
-              <span class="day">${this.day}</span>
-          </div>
-          <div class="headline">
-          <label class="headlinetext"> <a href=${this.headlinelink}><slot>${this.headline}</slot></a></label>
-          </div>
-          <div property="schema:text" class="info"><slot>${this.infotext}</slot></div>
-          
+        <div class="datebox">
+            <span class="month">${this.month}</span>
+            <span class="day">${this.day}</span>
+        </div>
+        <div class="headline">
+        <label class="headlinetext"> <a href="https://hr.psu.edu/news/expanded-family-sick-leave-full-time-staff-take-effect-january"><slot>${this.headline}</slot></a></label>
+        </div>
+        <div property="schema:text" class="info"><slot>${this.infotext}</slot></div>
         </div>
       </div>
       <a class="outsidebutton" href=${this.buttonlink}>
